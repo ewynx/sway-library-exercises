@@ -8,7 +8,7 @@ Use the following resources:
   - Specifically, the [Developer Quickstart](https://fuellabs.github.io/fuel-docs/master/developer-quickstart.html)
 - This [full-stack tutorial](https://github.com/ewynx/swayworkshop-web3rsvp/tree/beta-2), which is a fork from [this](https://github.com/camiinthisthang/learnsway-web3rsvp) original tutorial
 
-The idea is to write the code yourself. The repo contains solutions for all exercises but you are encouraged to not look at them before solving it yourself!
+The idea is to write the code yourself. The repo contains solutions for all exercises but you are encouraged to not look at them before solving it yourself! For each exercise you'll write test code either in a script or in Rust with the SDK. 
 
 Another option is to take the test parts from this repo and fill in the code yourself, but writing the testcode yourself is highly recommended and best practice. 
 
@@ -156,9 +156,9 @@ Testing in Rust.
 
 ## **Exercises Advanced**
 
-### (5) Our u128 impl - library, test in script
+### (5) Our U128 impl
 
-We'll create our own implementation of u128 called `MyU128`: unsigned integer of 128 bits, that consists of 2 `u64`'s `upper` and `lower`. 
+We'll create our own implementation of u128 called `MyU128`, which is an unsigned integer of 128 bits that consists of 2 `u64`'s `upper` and `lower`. 
 
 #### Part 1
 
@@ -172,7 +172,7 @@ Test in script.
 
 #### Part 2
 
-It is possible to implement traits that enable the usable of certain operators such as == and +. For this, it is necessary to import the corresponding trait, for example `core::ops::Eq` and implement the function of the trait. 
+It is possible to implement traits that enable the usable of certain operators such as `==` and `+`. For this, it is necessary to import the corresponding trait, for example `core::ops::Eq` and implement the function of the trait. 
 
 Use the code snippet to implement `<` and `>` on `MyU128` (this will be usefull further along):
 
@@ -191,9 +191,9 @@ impl Ord for MyU128 {
 ```
 
 Implement the following traits for `MyU128`:
-1. core::ops::Eq 
-2. core::ops::Add. If the result of adding the 2 U128's: panic.
-3. core::ops::Subtract If the result is negative: panic. 
+1. `core::ops::Eq`
+2. `core::ops::Add`. If the result of adding the 2 `MyU128`'s: panic.
+3. `core::ops::Subtract` If the result is negative: panic. 
 
 For 2: use the following helper function:
 ```rust
